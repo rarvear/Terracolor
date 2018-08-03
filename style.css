@@ -4,6 +4,29 @@
 	background-repeat: no-repeat;
 	padding-left: 0;
 }
+.lateralim {
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .img-fluid {
+    min-width: 100vw;
+  }
+}
+.img-fluid {
+	max-width: 100%;
+}
+
+.parlateral{
+	margin: 0;
+	left: 10%;
+	padding: 0;
+	z-index: 1;
+	position: absolute;
+}
 body {
 	margin: 0;
 }
@@ -32,20 +55,19 @@ img {
 	position: relative;
 }
 .text-sobre {
-	padding-top: 20px;
-	padding-left: 20px;
+	padding: 0;
 	color: white;
 	z-index: 1;
-	position: absolute;
-	text-shadow: text-shadow: 3px 2px black;
-
+	position: relative;
+	
 }
 .text-dark {
-	float: right;
-	text-align: right;
-	margin-top: 35%;
 	color: black;
+	bottom: 0;
 }
 .m5 {
 	margin-left: 5%;
+}
+.logo {
+	max-width: 50% !important;
 }
