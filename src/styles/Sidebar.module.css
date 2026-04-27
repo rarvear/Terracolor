@@ -1,0 +1,63 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 15, 10, 0.7) 0%, rgba(26, 15, 10, 0.1) 60%);
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+.card:hover .cardOverlay {
+  background: linear-gradient(to top, rgba(198, 93, 62, 0.8) 0%, rgba(139, 69, 19, 0.3) 60%);
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 1.25rem;
+}
+
+.cardTag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-white);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+}
+
+.card:hover .cardTag {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .cardImage {
+    aspect-ratio: 3 / 2;
+  }
+}

@@ -1,0 +1,90 @@
+.products {
+  padding: 5rem 0;
+  background: var(--color-white);
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-dark-soft);
+  margin-bottom: 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.35s ease;
+  border: 1px solid rgba(44, 24, 16, 0.06);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.card:hover .iconWrap {
+  transform: scale(1.1);
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-dark-soft);
+  margin-bottom: 0.75rem;
+}
+
+.cardText {
+  font-size: 1rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.cardBar {
+  width: 60px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 0 auto;
+  transition: width 0.3s;
+}
+
+.card:hover .cardBar {
+  width: 80px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
